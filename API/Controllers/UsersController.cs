@@ -7,7 +7,7 @@ using SQLitePCL;
 namespace API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v1/[controller]")]
     public class UsersController: ControllerBase
     {
         private readonly DataContext _context;
@@ -24,7 +24,7 @@ namespace API.Controllers;
             return users; 
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")]//api/v1/users/2
         public ActionResult<AppUser> GetUsersBy(int id)
         {
             var user = _context.Users.Find(id);
