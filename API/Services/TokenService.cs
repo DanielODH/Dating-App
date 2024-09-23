@@ -33,7 +33,3 @@ namespace API.Services;
             return tokenHandler.WriteToken(token);
         }
     }
-
-public interface ITokenService
-{
-}

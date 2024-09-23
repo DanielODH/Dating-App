@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using API.Data;
 using API.DTOs;
 using API.Entities;
@@ -11,12 +7,14 @@ using API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Controllers
-{
+namespace API.Controllers;
+
+
     public class AccountController(
         DataContext context,
-        ITokenServices tokenService): BaseApiController
+        ITokenService tokenService): BaseApiController
     {
+        
         [HttpPost("register")]
 
         public async Task<ActionResult<UserResponse>> RegisterAsync(RegisterRequest request) 
@@ -75,4 +73,3 @@ namespace API.Controllers
     private async Task<bool> UserExistsAsync(string username) =>
         await context.Users.AnyAsync(u => u.UserName.ToLower() == username.ToLower());
     }
-}
