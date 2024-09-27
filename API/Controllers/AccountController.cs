@@ -58,7 +58,7 @@ namespace API.Controllers;
         
             for (int i = 0; i < computeHash.Length; i++){
                 if (computeHash[i] != user.PasswordHash[i]){
-                    return Unauthorized("Ivalid username or password");
+                    return Unauthorized("Invalid username or password");
                 }
             }
         
