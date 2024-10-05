@@ -36,7 +36,7 @@ namespace API.Controllers;
             return user;
         }
 
-        [HttpGet("{name}")]//api/v1/users/Calamardo
+        [HttpGet("{name}")]//api/users/Calamardo
         public ActionResult<string> Ready(string name)
         {
             return $"Hi {name}";

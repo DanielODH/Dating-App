@@ -9,12 +9,11 @@ import { AccountService } from '../_services/account.service';
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
-
 export class RegisterComponent {
   private accountService = inject(AccountService);
-  usersFromHomeComponent = input.required<any>();
+  // usersFromHomeComponent = input.required<any>();
   cancelRegister = output<boolean>();
-  model: any ={};
+  model: any = {};
 
   register(): void {
     this.accountService.register(this.model).subscribe({
