@@ -7,6 +7,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { authGuard } from './_guards/auth.guard';
 
 export const routes: Routes = [
+    {path:"",component: HomeComponent}, 
     {
         path: "",
         runGuardsAndResolvers: "always",
