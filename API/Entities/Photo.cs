@@ -11,5 +11,9 @@ public class Photo
 
     public bool IsMain {get; set;}
 
-    public string? PublicId {get; set;}      
+    public string? PublicId {get; set;}   
+
+    //EF Naviagtions Properties
+    public int AppUserId {get; set;}
+    public AppUser AppUser {get; set;} = null!;   
 }
