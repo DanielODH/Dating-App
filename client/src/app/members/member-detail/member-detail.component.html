@@ -34,13 +34,6 @@
                 <p>{{member.interests}}</p>
             </tab>
             <tab heading="Photos" #photoTab="tab">
-                @if (photoTab.active)
-                {<gallery
-                    [items]="images"
-                    class="gallery"
-                ></gallery>}
-            </tab>
-            <tab heading="Photos" #photoTab="tab">
                 @if (photoTab.active) {
                     <gallery
                         [items]="images"
@@ -54,6 +47,9 @@
                         style="--g-thumb-width: 120px; --g-thumb-height: 90px; --slider-width: 998px; --slider-height: 409px;">
                 </gallery>
                 }
+            </tab>
+            <tab heading="Mensajes">
+                <p>!Los mensajes van'ir aquí!</p>
             </tab>
         </tabset>
     </div>
