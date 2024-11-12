@@ -5,6 +5,7 @@ using API.DataEntities;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Data;
+
 public class Seed
 {
     public static async Task SeedUsersAsync(DataContext context){

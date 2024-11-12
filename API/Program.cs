@@ -1,39 +1,44 @@
+namespace API;
+
 using API.Data;
-using API.Extensions;
-using API.Middlewares;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
 
-var builder = WebApplication.CreateBuilder(args);
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        var host = CreateHostBuilder(args).Build();
+        using var scope = host.Services.CreateScope();
+        var services = scope.ServiceProvider;
 
-// Add services to the container.
-builder.Services.AddApplicationServices(builder.Configuration);
-builder.Services.AddIdentityServices(builder.Configuration);
+        try
+        {
+            var context = services.GetRequiredService<DataContext>();
+            // var userManager = services.GetRequiredService<UserManager<AppUser>>();
+            // var roleManger = services.GetRequiredService<RoleManager<AppRole>>();
 
-var app = builder.Build();
+            await context.Database.MigrateAsync();
+            await Seed.SeedUsersAsync(context); // (userManager, roleManger);
+        }
+        catch (Exception ex)
+        {
+            var logger = services.GetRequiredService<ILogger<Program>>();
+            logger.LogError(ex, "An error has ocurred during migration/seeding");
+        }
 
-app.UseMiddleware<ExceptionMiddleware>();
-// Configure the HTTP request pipeline.
-app.UseCors(cors => cors
-.AllowAnyHeader()
-.AllowAnyMethod()
-.WithOrigins(
-  "http://localhost:4200",
-  "https://localhost:4200"));
-app.UseAuthentication();
-app.UseAuthorization();
+        await host.RunAsync();
+    }
 
-app.MapControllers();
-
-using var scope = app.Services.CreateScope();
-var services = scope.ServiceProvider;
-try{
-  var context = services.GetRequiredService<DataContext>();
-  await context.Database.MigrateAsync();
-  await Seed.SeedUsersAsync(context);
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
 }
-catch(Exception ex) {
-  var logger = services.GetRequiredService<ILogger<Program>>();
-  logger.LogError(ex, "An error ocurred during migration/seeding");
-}
-
-app.Run();
