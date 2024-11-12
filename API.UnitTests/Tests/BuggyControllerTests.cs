@@ -8,11 +8,11 @@ using API.UnitTests.Helpers;
 using Newtonsoft.Json.Linq;
 public class BuggyControllerTests
 {
-    private string apiRoute = "api/buggy";
+    private readonly string apiRoute = "api/buggy";
     private readonly HttpClient _client;
     private HttpResponseMessage httpResponse;
     private string requestUrl;
-    private string loginObjetct;
+    private string loginObject;
     private HttpContent httpContent;
     public BuggyControllerTests()
     {
@@ -30,8 +30,8 @@ public class BuggyControllerTests
             Username = username,
             Password = password
         };
-        loginObjetct = GetLoginObject(loginRequest);
-        httpContent = GetHttpContent(loginObjetct);
+        loginObject = GetLoginObject(loginRequest);
+        httpContent = GetHttpContent(loginObject);
         httpResponse = await _client.PostAsync(requestUrl, httpContent);
         var reponse = await httpResponse.Content.ReadAsStringAsync();
         var userResponse = JsonSerializer.Deserialize<UserResponse>(reponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
@@ -89,9 +89,7 @@ public class BuggyControllerTests
             };
         return entityObject.ToString();
     }
-    private static StringContent GetHttpContent(string objectToCode)
-    {
-        return new StringContent(objectToCode, Encoding.UTF8, "application/json");
-    }
+    private static StringContent GetHttpContent(string objectToCode) =>
+        new(objectToCode, Encoding.UTF8, "application/json");
     #endregion
 }
