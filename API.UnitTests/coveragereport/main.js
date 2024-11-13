@@ -221,25 +221,25 @@ var assemblies = [
   {
     "name": "API",
     "classes": [
-      { "name": "API.Controllers.AccountController", "rp": "API_AccountController.html", "cl": 18, "ucl": 11, "cal": 29, "tl": 73, "cb": 4, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.Controllers.AccountController", "rp": "API_AccountController.html", "cl": 29, "ucl": 0, "cal": 29, "tl": 73, "cb": 8, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Controllers.BuggyController", "rp": "API_BuggyController.html", "cl": 7, "ucl": 2, "cal": 9, "tl": 21, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.Controllers.UsersController", "rp": "API_UsersController.html", "cl": 0, "ucl": 29, "cal": 29, "tl": 66, "cb": 0, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.Controllers.UsersController", "rp": "API_UsersController.html", "cl": 21, "ucl": 8, "cal": 29, "tl": 66, "cb": 4, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Data.DataContext", "rp": "API_DataContext.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Data.Seed", "rp": "API_Seed.html", "cl": 4, "ucl": 15, "cal": 19, "tl": 38, "cb": 1, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Data.UserRepository", "rp": "API_UserRepository.html", "cl": 0, "ucl": 19, "cal": 19, "tl": 42, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.DataEntities.AppUser", "rp": "API_AppUser.html", "cl": 6, "ucl": 9, "cal": 15, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.DataEntities.Photo", "rp": "API_Photo.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.DataEntities.AppUser", "rp": "API_AppUser.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.DataEntities.Photo", "rp": "API_Photo.html", "cl": 4, "ucl": 2, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.DTOs.LoginRequest", "rp": "API_LoginRequest.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 9, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.DTOs.MemberResponse", "rp": "API_MemberResponse.html", "cl": 0, "ucl": 14, "cal": 14, "tl": 28, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.DTOs.MemberUpdateRequest", "rp": "API_MemberUpdateRequest.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.DTOs.PhotoResponse", "rp": "API_PhotoResponse.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.DTOs.RegisterRequest", "rp": "API_RegisterRequest.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.DTOs.MemberResponse", "rp": "API_MemberResponse.html", "cl": 14, "ucl": 0, "cal": 14, "tl": 28, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.DTOs.MemberUpdateRequest", "rp": "API_MemberUpdateRequest.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.DTOs.PhotoResponse", "rp": "API_PhotoResponse.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.DTOs.RegisterRequest", "rp": "API_RegisterRequest.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 12, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.DTOs.UserResponse", "rp": "API_UserResponse.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Errors.ApiException", "rp": "API_ApiException.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 7, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Extensions.ApplicationServiceExtensions", "rp": "API_ApplicationServiceExtensions.html", "cl": 10, "ucl": 2, "cal": 12, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.Extensions.DateTimeExtensions", "rp": "API_DateTimeExtensions.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 10, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.Extensions.DateTimeExtensions", "rp": "API_DateTimeExtensions.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 10, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Extensions.IdentityServiceExtensions", "rp": "API_IdentityServiceExtensions.html", "cl": 16, "ucl": 0, "cal": 16, "tl": 26, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.Helpers.AutoMapperProfiles", "rp": "API_AutoMapperProfiles.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.Helpers.AutoMapperProfiles", "rp": "API_AutoMapperProfiles.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Middlewares.ExceptionMiddleware", "rp": "API_ExceptionMiddleware.html", "cl": 24, "ucl": 0, "cal": 24, "tl": 32, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Program", "rp": "API_Program.html", "cl": 5, "ucl": 16, "cal": 21, "tl": 44, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Services.TokenService", "rp": "API_TokenService.html", "cl": 20, "ucl": 2, "cal": 22, "tl": 39, "cb": 2, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -252,17 +252,9 @@ var metrics = [{ "name": "Crap Score", "abbreviation": "crp", "explanationUrl": 
 var historicCoverageExecutionTimes = [];
 
 var riskHotspotMetrics = [
-      { "name": "Crap Score", "explanationUrl": "https://googletesting.blogspot.de/2011/02/this-code-is-crap.html" },
-      { "name": "Cyclomatic complexity", "explanationUrl": "https://en.wikipedia.org/wiki/Cyclomatic_complexity" },
 ];
 
 var riskHotspots = [
-  {
-    "assembly": "API", "class": "API.Controllers.UsersController", "reportPath": "API_UsersController.html", "methodName": "UpdateUser()", "methodShortName": "UpdateUser()", "fileIndex": 0, "line": 45,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
 ];
 
 var branchCoverageAvailable = true;
