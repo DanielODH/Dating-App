@@ -223,9 +223,9 @@ var assemblies = [
     "classes": [
       { "name": "API.Controllers.AccountController", "rp": "API_AccountController.html", "cl": 29, "ucl": 0, "cal": 29, "tl": 73, "cb": 8, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Controllers.BuggyController", "rp": "API_BuggyController.html", "cl": 7, "ucl": 2, "cal": 9, "tl": 21, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.Controllers.UsersController", "rp": "API_UsersController.html", "cl": 21, "ucl": 8, "cal": 29, "tl": 66, "cb": 4, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.Controllers.UsersController", "rp": "API_UsersController.html", "cl": 29, "ucl": 0, "cal": 29, "tl": 66, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Data.DataContext", "rp": "API_DataContext.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "API.Data.Seed", "rp": "API_Seed.html", "cl": 4, "ucl": 15, "cal": 19, "tl": 38, "cb": 1, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "API.Data.Seed", "rp": "API_Seed.html", "cl": 17, "ucl": 2, "cal": 19, "tl": 38, "cb": 4, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.Data.UserRepository", "rp": "API_UserRepository.html", "cl": 0, "ucl": 19, "cal": 19, "tl": 42, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.DataEntities.AppUser", "rp": "API_AppUser.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "API.DataEntities.Photo", "rp": "API_Photo.html", "cl": 4, "ucl": 2, "cal": 6, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },

@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+
 public class APIWebApplicationFactory<IStartup> : WebApplicationFactory<Startup>
 {
     public IConfiguration Configuration { get; set; }
@@ -53,6 +54,10 @@ public class APIWebApplicationFactory<IStartup> : WebApplicationFactory<Startup>
                     try
                     {
                         await context.Database.MigrateAsync();
+                        var allUsers = await context.Users.ToListAsync();
+                        context.Users.RemoveRange(allUsers);
+                        await context.SaveChangesAsync();
+                        Console.WriteLine(context.Users.Count());
                         await Seed.SeedUsersAsync(context);
                     }
                     catch (Exception ex)
@@ -62,6 +67,7 @@ public class APIWebApplicationFactory<IStartup> : WebApplicationFactory<Startup>
                     }
                 }
             });
+
     private void __loadTestData(DataContext appDbContext)
     {
         appDbContext.Database.EnsureCreated();
