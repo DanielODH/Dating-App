@@ -92,7 +92,7 @@ namespace API.UnitTests.Tests
             // Assert
             var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
             Assert.Equal("No username found in token", badRequestResult.Value);
-        }
+        }
 
         [Fact]
         public async Task UpdateUser_ReturnsNotFound_WhenUserDoesNotExist()

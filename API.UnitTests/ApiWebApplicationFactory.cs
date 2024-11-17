@@ -59,6 +59,7 @@ public class APIWebApplicationFactory<IStartup> : WebApplicationFactory<Startup>
                         await context.SaveChangesAsync();
                         Console.WriteLine(context.Users.Count());
                         await Seed.SeedUsersAsync(context);
+                        await Seed.SeedUsersAsync(context);
                     }
                     catch (Exception ex)
                     {

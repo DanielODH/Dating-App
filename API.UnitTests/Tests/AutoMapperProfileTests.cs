@@ -29,7 +29,7 @@ namespace API.UnitTests.Tests;
                 UserName = "arenita",
                 BirthDay = new DateOnly(1990, 1, 1),
                 KnownAs = "Terminator",
-                Gender = "Male",
+                Gender = "female",
                 City = "Aguascalientes",
                 Country = "Mexico",
                 Photos = new List<Photo>
