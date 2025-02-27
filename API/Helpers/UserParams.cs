@@ -17,6 +17,9 @@ public class UserParams
         set => pageSize = (value is < 1 or > MAX_PAGE_SIZE) ? MAX_PAGE_SIZE : value;
     }
 
-    public string? Gender { get; set; }
     public string? CurrentUsername { get; set; }
+
+    public string? Gender { get; set; }
+    public int MinAge { get; set; } = 18;
+    public int MaxAge { get; set; } = 100;
 }
