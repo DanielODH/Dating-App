@@ -12,7 +12,6 @@ import { UserParams } from '../../_models/userParams';
   templateUrl: './member-list.component.html',
   styleUrl: './member-list.component.css'
 })
-
 export class MemberListComponent implements OnInit {
   private accountService = inject(AccountService);
   membersService = inject(MembersService);
