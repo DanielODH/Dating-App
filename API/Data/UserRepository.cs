@@ -4,6 +4,7 @@ using API.Helpers;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 namespace API.Data;
 public class UserRepository(DataContext context, IMapper mapper) : IUserRepository
@@ -41,10 +42,16 @@ public class UserRepository(DataContext context, IMapper mapper) : IUserReposito
             query = query.Where(u => u.Gender == userParams.Gender);
         }
 
-var minBDay = DateOnly.FromDateTime(DateTime.Today.AddYears(-userParams.MaxAge - 1));
+        var minBDay = DateOnly.FromDateTime(DateTime.Today.AddYears(-userParams.MaxAge - 1));
         var maxBDay = DateOnly.FromDateTime(DateTime.Today.AddYears(-userParams.MinAge));
 
         query = query.Where(u => u.BirthDay >= minBDay && u.BirthDay <= maxBDay);
+        
+        query = userParams.OrderBy.ToLower(CultureInfo.InvariantCulture) switch
+        {
+            "created" => query.OrderByDescending(x => x.Created),
+            _ => query.OrderByDescending(x => x.LastActive)
+        };
 
         return await PagedList<MemberResponse>.CreateAsync(
             query.ProjectTo<MemberResponse>(mapper.ConfigurationProvider), userParams.PageNumber, userParams.PageSize);
