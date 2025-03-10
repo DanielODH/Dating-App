@@ -1,4 +1,3 @@
-using API.Extensions;
 
 namespace API.DataEntities;
 
@@ -33,5 +32,6 @@ public class AppUser
 
     public List<Photo> Photos { get; set; } = [];
 
-    //public int GetAge() => BirthDay.CalculateAge();
+    public List<UserLike> LikedByUsers { get; set; } = [];
+     public List<UserLike> LikedUsers { get; set; } = [];
 }
