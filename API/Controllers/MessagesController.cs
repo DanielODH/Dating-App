@@ -71,41 +71,41 @@ public class MessagesController
     }
 
     [HttpDelete("{id:int}")]
-     public async Task<ActionResult> DeleteMessage(int id)
-     {
-         var username = User.GetUserName();
-         var message = await messageRepository.GetAsync(id);
+    public async Task<ActionResult> DeleteMessage(int id)
+    {
+        var username = User.GetUserName();
+        var message = await messageRepository.GetAsync(id);
  
-         if (message == null)
-         {
-             return BadRequest("Can't delete the message");
-         }
+        if (message == null)
+        {
+            return BadRequest("Can't delete the message");
+        }
  
-         if (message.SenderUsername != username || message.RecipientUsername != username)
-         {
-             return Forbid();
-         }
+        if (message.SenderUsername != username && message.RecipientUsername != username)
+        {
+            return Forbid();
+        }
  
-         if (message.SenderUsername == username)
-         {
-             message.SenderDeleted = true;
-         }
+        if (message.SenderUsername == username)
+        {
+            message.SenderDeleted = true;
+        }
  
-         if (message.RecipientUsername == username)
-         {
-             message.RecipientDeleted = true;
-         }
+        if (message.RecipientUsername == username)
+        {
+            message.RecipientDeleted = true;
+        }
  
-         if (message is { SenderDeleted: true, RecipientDeleted: true })
-         {
-             messageRepository.Remove(message);
-         }
+        if (message is { SenderDeleted: true, RecipientDeleted: true })
+        {
+            messageRepository.Remove(message);
+        }
  
-         if (await messageRepository.SaveAllAsync())
-         {
-             return Ok();
-         }
+        if (await messageRepository.SaveAllAsync())
+        {
+            return Ok();
+        }
  
-         return BadRequest("There was an issue");
+        return BadRequest("There was an issue");
      }
  }
