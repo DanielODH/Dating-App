@@ -18,4 +18,4 @@ export class MemberMessagesComponent implements OnInit {
  
   ngOnInit(): void {
   }
- }
+}
