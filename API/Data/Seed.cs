@@ -23,10 +23,7 @@ public class Seed
         }
     
         foreach (var user in users){
-            using var hmac = new HMACSHA512();
-
-            user.UserName = user.UserName.ToLower();
-            
+            using var hmac = new HMACSHA512();            
 
             context.Users.Add(user);
         }
