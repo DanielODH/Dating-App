@@ -12,6 +12,4 @@ namespace API.Data;
     public Task<UserLike?> GetUserLikeAsync(int sourceUserId, int targerUserId);
     public Task<PagedList<MemberResponse>> GetUserLikesAsync(LikesParams likesParams);
     public void RemoveLike(UserLike userLike);
-    public Task<bool> SaveChangesAsync();
- 
  }
